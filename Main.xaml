@@ -1,0 +1,394 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.AsyncEnumerable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1278,5501" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="[String.Empty]" Name="missingPMR" />
+      <Variable x:TypeArguments="x:String" Name="reportText" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="attendanceCount" />
+      <Variable x:TypeArguments="x:String" Name="reminderBody" />
+      <Variable x:TypeArguments="x:String" Name="awardBody" />
+      <Variable x:TypeArguments="x:String" Name="reportPath" />
+      <Variable x:TypeArguments="x:String" Name="reportHtml" />
+      <Variable x:TypeArguments="x:String" Name="pendingEmails" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="topCount" />
+      <Variable x:TypeArguments="x:String" Name="topEmail" />
+      <Variable x:TypeArguments="x:String" Name="topName" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dAttendance" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Highlanders Weekly Automation" sap:VirtualizedContainerService.HintSize="650,5478" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="upr:ILocalResource" Name="pdfResource" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelApplicationCard DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="616,450" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[System.IO.Path.Combine(&quot;Data&quot;, &quot;Copy of Highlanders Attendance Monitoring Sheet26-27.xlsx&quot;)]">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,221" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,161" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;UPDATED H-Attendance&quot;).Range(&quot;A5:W121&quot;)]" SaveTo="[dAttendance]" VisibleOnly="False" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[If(dAttendance Is Nothing, &quot;ERROR: Excel data was not loaded&quot;, &quot;SUCCESS: &quot; &amp; dAttendance.Rows.Count.ToString &amp; &quot; rows loaded&quot;)]" />
+      <Assign sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[topCount]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[topName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[String.Empty]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[reportText]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["HIGHLANDERS ATTENDANCE SUMMARY" &amp; Environment.NewLine &amp; "Generated: " &amp; Now.ToString("MMMM dd, yyyy") &amp; Environment.NewLine &amp; "--------------------------------" &amp; Environment.NewLine]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dAttendance]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="616,1900" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1718" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[attendanceCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[attendanceCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[CurrentRow.ItemArray.Skip(5).Take(17).Count(Function(cell) cell IsNot Nothing AndAlso cell.ToString.Trim.Equals("Present", StringComparison.OrdinalIgnoreCase))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[CurrentRow(&quot;Name&quot;).ToString &amp; &quot; - Attendance: &quot; &amp; attendanceCount.ToString]" />
+              <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[reportText]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(CurrentRow("Name").ToString), reportText, reportText &amp; CurrentRow("Name").ToString &amp; " - Attendance: " &amp; attendanceCount.ToString &amp; Environment.NewLine)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <If Condition="[attendanceCount &gt; topCount]" sap:VirtualizedContainerService.HintSize="452,597" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[topCount]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[attendanceCount]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[topName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow("Name").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If Condition="[CurrentRow(&quot;PMR&quot;).ToString.Trim.ToLower = &quot;false&quot;]" sap:VirtualizedContainerService.HintSize="452,413" sap2010:WorkflowViewState.IdRef="If_3">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[missingPMR]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[missingPMR &amp; CurrentRow("Name").ToString &amp; Environment.NewLine]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+      <Assign sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[reportText]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[reportText &amp; Environment.NewLine &amp; "--------------------------------" &amp; Environment.NewLine &amp; "TOP HIGHLANDER" &amp; Environment.NewLine &amp; "Name: " &amp; topName &amp; Environment.NewLine &amp; "Attendance Count: " &amp; topCount.ToString &amp; Environment.NewLine &amp; Environment.NewLine &amp; "--------------------------------" &amp; Environment.NewLine &amp; "STUDENTS WITH MISSING PMR WAIVER" &amp; Environment.NewLine &amp; If(String.IsNullOrWhiteSpace(missingPMR), "All students have submitted.", missingPMR)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;TOP HIGHLANDER!&quot; &amp; Environment.NewLine &amp; &quot;Name: &quot; &amp; topName &amp; Environment.NewLine &amp; &quot;Attendance Count: &quot; &amp; topCount.ToString]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;PMR WAIVER MONITORING&quot; &amp; Environment.NewLine &amp; &quot;Students with Missing PMR Waiver: &quot; &amp; missingPMR.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).Length.ToString]" />
+      <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" FileName="Highlanders_Attendance_Summary.txt" sap:VirtualizedContainerService.HintSize="616,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[reportText]" />
+      <If Condition="[System.IO.File.Exists(&quot;Highlanders_Attendance_Report.docx&quot;)]" sap:VirtualizedContainerService.HintSize="616,371" sap2010:WorkflowViewState.IdRef="If_2">
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="Highlanders_Attendance_Report.docx" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="Highlanders_Attendance_Report.docx" sap:VirtualizedContainerService.HintSize="616,522" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+        <p:WordApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WordDocument">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,391" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[reportText]" />
+              <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="Highlanders_Attendance_Report.pdf" sap:VirtualizedContainerService.HintSize="416,161" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+            </Sequence>
+          </ActivityAction>
+        </p:WordApplicationScope.Body>
+      </p:WordApplicationScope>
+      <ui:PathExists Exists="{x:Null}" DisplayName="Get Local File or Folder" sap:VirtualizedContainerService.HintSize="616,174" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[System.IO.Path.GetFullPath(&quot;Highlanders_Attendance_Report.pdf&quot;)]" PathType="File" Resource="[pdfResource]" />
+      <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Good day, Moderators!&#xA;&#xA;The Highlanders Attendance and PMR Waiver Monitoring Report has been generated.&#xA;&#xA;The report includes:&#xA;&#xA;Attendance summary&lt;/SPAN&gt;&lt;SPAN&gt;,&lt;/SPAN&gt;&lt;SPAN&gt;&#xA;&#xA;Top Highlander and attendance count&lt;/SPAN&gt;&lt;SPAN&gt;, and &lt;/SPAN&gt;&lt;SPAN&gt;&#xA;&#xA;List of students with missing PMR Waivers&lt;/SPAN&gt;&lt;SPAN&gt;.&lt;/SPAN&gt;&lt;SPAN&gt;&#xA;&#xA;Please review the attached PDF report.&#xA;&#xA;Thank you!&#xA;&#xA;Highlanders Attendance Monitoring System&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="534d527e-ea94-4380-b4cf-27f7929a8066" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="616,619" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Highlanders Attendance and PMR Waiver Summary" To="[New String(){&quot;tristan_mark_martinez@dlsl.edu.ph&quot;,&quot;nicole_louise_marquez@dlsl.edu.ph&quot;,&quot;raymond_laurence_cabauatan@dlsl.edu.ph&quot;,&quot;miguel_alfonso_pecayo@dlsl.edu.ph&quot;,&quot;chanel_allyson_crispospolo@dlsl.edu.ph&quot;,&quot;arabelle.balita@dlsl.edu.ph&quot;}]" UseConnectionService="True">
+        <uga:SendEmailConnections.ArgumentAttachments>
+          <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+            <InArgument x:TypeArguments="upr:IResource">[pdfResource]</InArgument>
+          </scg:List>
+        </uga:SendEmailConnections.ArgumentAttachments>
+        <uga:SendEmailConnections.AttachmentsBackup>
+          <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                <x:Null />
+              </scg:List>
+              <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+                <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="0" />
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:SendEmailConnections.AttachmentsBackup>
+        <uga:SendEmailConnections.InputTypeBackup>
+          <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:SendEmailConnections.InputTypeBackup>
+      </uga:SendEmailConnections>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="616,114" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;PDF REPORT CREATED SUCCESSFULLY!&quot; &amp; Environment.NewLine &amp; Environment.NewLine &amp; &quot;File: Highlanders_Attendance_Report.pdf&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>
